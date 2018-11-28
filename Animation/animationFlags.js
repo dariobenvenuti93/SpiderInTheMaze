@@ -9,3 +9,5 @@ var objective1Captured = 0;
 var objective2Captured = 0;
 var objective3Captured = 0;
 var objective4Captured = 0;
+
+var objectivesCaptured = 0;

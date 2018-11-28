@@ -231,19 +231,31 @@ function update() {
 				// check if the user has collected an objective
 				if ( torsoX == 4 && torsoZ == -5 && objective1Captured == 0 ){
 					objective1Captured = 1;
-					console.log("Objective1 captured!");
+					objectivesCaptured++;
+					// update the text in the html
+					document.getElementById("objectivesDiv").innerHTML = "Objectives collected: " + objectivesCaptured;
+					document.getElementById("objectivesDiv").style.fontSize = "20px";
 				}
 				if ( torsoX == 4 && torsoZ ==  4 && objective2Captured == 0 ){
 					objective2Captured = 1;
-					console.log("Objective2 captured!");
+					objectivesCaptured++;
+					// update the text in the html
+					document.getElementById("objectivesDiv").innerHTML = "Objectives collected: " + objectivesCaptured;
+					document.getElementById("objectivesDiv").style.fontSize = "20px";
 				}
 				if ( torsoX == -5 && torsoZ == -5 && torsoZ <= -4 && objective3Captured == 0 ){
 					objective3Captured = 1;
-					console.log("Objective3 captured!");
+					objectivesCaptured++;
+					// update the text in the html
+					document.getElementById("objectivesDiv").innerHTML = "Objectives collected: " + objectivesCaptured;
+					document.getElementById("objectivesDiv").style.fontSize = "20px";
 				}
 				if ( torsoX == -5 && torsoZ == 2 && 3 >= torsoZ && torsoZ <= 4 && objective4Captured == 0 ){
 					objective4Captured = 1;
-					console.log("Objective4 captured!");
+					objectivesCaptured++;
+					// update the text in the html
+					document.getElementById("objectivesDiv").innerHTML = "Objectives collected: " + objectivesCaptured;
+					document.getElementById("objectivesDiv").style.fontSize = "20px";
 				}
 			}
 		}

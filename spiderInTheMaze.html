@@ -122,41 +122,108 @@ main()
 <script type="text/javascript" src="Hierarchical/Functions/hierarchicalQuadFunctions.js"></script>
 
 <script type="text/javascript" src="mainScript.js"></script>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<title> Almost Pacman</title>
+		
+		<style>
+			body{
+				font: 10px sans-serif;
+			}
+			.titleDiv{
+				width:100%;
+				height: 30px;
+				position: absolute;
+				top: 0;
+			}
+			.canvasDiv{
+				width: 50%;
+				height: 700px;
+				position: absolute;
+				top: 60px;
+				left: 0;
+			}
+			.notesDiv{
+				width: 50%;
+				height: 700px;
+				position: absolute;
+				top: 60px;
+				left: 50%;
+			}
+			.debugDiv{
+				width: 100%;
+				height: 500px;
+				position: absolute;
+				top: 760px;
+			}
+			.h1{
+				font: 20px sans-serif;
+			}
+			.button{
+				background-color: #f0f0f0;
+				height: 20px;
+				border: 0.7px solid #000;
+				posotion: relative;
+				opacity: 0.8;
+				transition: 0.1s;
+				cursor: pointer;
+			}
+			.button:hover{
+				opacity: 1;
+				border: 1px solid @000;
+			}
+		</style>
+		
+		<body>
+			<div align="center" id="title" class="titleDiv">
+				<h1>Almost Pacman</h1>
+			</div>
+			<div align="left" id="canvas" class="canvasDiv">
+				<canvas id="gl-canvas" width="512"" height="512">
+				Oops ... your browser doesn't support the HTML5 canvas element
+				</canvas>
+			</div>
+			<div align="left" id="notes" class="notesDiv">
+				<h1>
+					Welcome to "Almost Pacman"!
+					<br/>
+					Move the spider through the maze using the keyboard arrow keys, and try to collect all the objectives.
+				</h1>
+				<div align="left" id="objectivesDiv">
+					<h1 class="h1"> Objectives collected: 0 </h1>
+				</div>
+			</div>
+			<div align ="left" id="debug" class="debugDiv">
+				<h1>
+					Here you can find some debugging options. Don't use these buttons unless you know what you are doing!
+				</h1>
+				<button type="button" class="button" id= "xButtonSP">Rotate Scene X</button>
+				<button type="button" class="button" id= "yButtonSP">Rotate Scene Y</button>
+				<button type="button" class="button" id= "zButtonSP">Rotate Scene Z</button>
 
-<body>
-<canvas id="gl-canvas" width="512"" height="512">
-Oops ... your browser doesn't support the HTML5 canvas element
-</canvas>
+				<br/>
 
-<br/>
+				<button type="button" class="button" id= "xButtonSN">Rotate Scene -X</button>
+				<button type="button" class="button" id= "yButtonSN">Rotate Scene -Y</button>
+				<button type="button" class="button" id= "zButtonSN">Rotate Scene -Z</button>
 
-<button id= "xButtonSP">Rotate Scene X</button>
-<button id= "yButtonSP">Rotate Scene Y</button>
-<button id= "zButtonSP">Rotate Scene Z</button>
+				<br/>
 
-<br/>
+				<button type="button" class="button" id= "xButtonMP">Rotate Maze X</button>
+				<button type="button" class="button" id= "yButtonMP">Rotate Maze Y</button>
+				<button type="button" class="button" id= "zButtonMP">Rotate Maze Z</button>
 
-<button id= "xButtonSN">Rotate Scene -X</button>
-<button id= "yButtonSN">Rotate Scene -Y</button>
-<button id= "zButtonSN">Rotate Scene -Z</button>
+				<br/>
 
-<br/>
+				<button type="button" class="button" id= "xButtonMN">Rotate Maze -X</button>
+				<button type="button" class="button" id= "yButtonMN">Rotate Maze -Y</button>
+				<button type="button" class="button" id= "zButtonMN">Rotate Maze -Z</button>
 
-<button id= "xButtonMP">Rotate Maze X</button>
-<button id= "yButtonMP">Rotate Maze Y</button>
-<button id= "zButtonMP">Rotate Maze Z</button>
+				<br/>
 
-<br/>
-
-<button id= "xButtonMN">Rotate Maze -X</button>
-<button id= "yButtonMN">Rotate Maze -Y</button>
-<button id= "zButtonMN">Rotate Maze -Z</button>
-
-<br/>
-
-<button id= "animationOn">Start the animation</button>
-<button id= "animationOff">Stop the animation</button>
-
-
-</body>
+				<button type="button" class="button" id= "animationOn">Start the animation</button>
+				<button type="button" class="button" id= "animationOff">Stop the animation</button>
+			</div>
+		</body>
+	</head>
 </html>

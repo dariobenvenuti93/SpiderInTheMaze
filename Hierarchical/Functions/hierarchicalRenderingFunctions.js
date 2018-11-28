@@ -99,12 +99,16 @@ function torso () {
 	
 	gl.uniformMatrix4fv(modelViewMatrixLoc, false, flatten(instanceMatrix));
 	
-	quadTorso(0,1,2,3);
-	quadTorso(5,4,7,6);
-	quadTorso(2,1,5,6);
-	quadTorso(1,0,4,5);
-	quadTorso(0,3,7,4);
-	quadTorso(3,2,6,7);
+	var x = 0;
+	
+	quadTorso(x+2, x+3, x, x+1);
+	var x2 = x;
+	for (var j=0; j<3; j++){
+		quadTorso( x2, x2+1, x2+5, x2+4);
+		x2++;
+	}
+	quadTorso( x+3, x, x+4, x+7);
+	quadTorso( x+4, x+5, x+6, x+7);
 	
 }
 //------UPPER LEGS ---------
